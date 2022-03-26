@@ -1,0 +1,64 @@
+.hero {
+  height: 70vh;
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: black;
+  z-index: -1;
+}
+
+.back-image {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  opacity: 40%;
+}
+
+.centered.h1 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  color: aliceblue;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.centered.h2 {
+  position: absolute;
+  top: 32%;
+  left: 20%;
+  color: aliceblue;
+  letter-spacing: 3px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+.bt-large {
+  width: 5rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+.bt-large:hover {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  color: black;
+  background-color: white;
+}
+
+.bt-container {
+  display: inline-block;
+}
+
+.bt-container:hover {
+  transform: scale(1.1);
+}

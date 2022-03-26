@@ -1,0 +1,10 @@
+.about {
+  background-color: rgb(255, 115, 0);
+  letter-spacing: 1.2rem;
+  font-weight: 400;
+}
+
+.about button {
+  width: 5rem;
+  height: 3rem;
+}

@@ -1,0 +1,29 @@
+.button-picker{
+    height: 1.3rem;
+    width: 1.3rem;
+    text-align: center;
+    display: inline-block;
+    margin: 1rem;
+    padding: 0;
+    border: none;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+.button-picker:hover{
+    transform: scale(1.09);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 0.1px solid rgb(0, 0, 0);
+}
+
+.quantity-label{
+    display: inline-block;
+    width: 2rem;
+    border: 0.5px solid black ;
+    border-radius: 0.2rem;
+    text-align: center;
+
+}
+
