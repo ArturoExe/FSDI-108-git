@@ -1,0 +1,39 @@
+.admin h1 {
+  color: rgb(255, 114, 62);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 50% 2fr;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.formControl {
+  width: 100%;
+}
+.formControl input {
+  margin: 0.5rem;
+  width: 20rem;
+  height: 1.5rem;
+  border-radius: 3rem;
+  border-style: solid;
+  text-align: center;
+}
+.formControl label {
+  display: block;
+}
+
+.formControl .coupon {
+  height: 5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.form button {
+  width: 9rem;
+  height: 2rem;
+}

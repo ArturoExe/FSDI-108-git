@@ -31,6 +31,13 @@ a {
   color: rgb(0, 0, 0);
 }
 
+.secondary {
+  color: rgb(255, 123, 0);
+}
+.secondary:hover {
+  color: rgba(247, 164, 86, 0.623);
+}
+
 a:hover {
   color: rgb(255, 123, 0);
 }

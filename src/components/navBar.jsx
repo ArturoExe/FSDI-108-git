@@ -1,9 +1,11 @@
 import "./navBar.css";
 import { gsap } from "gsap";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import store from "../context/storeContext";
 
 const NavBar = () => {
+  //Controls the animation of the navbar using gsap
   const timeline = gsap.timeline();
 
   useEffect(() => {
@@ -14,6 +16,8 @@ const NavBar = () => {
       stagger: 0.5,
     });
   }, []);
+
+  const cart = useContext(store).cart; //read cart from context
 
   return (
     <div className="navBar animation">
@@ -32,7 +36,12 @@ const NavBar = () => {
           <Link to="/catalog">Catalog</Link>
         </li>
         <li className="animation">
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">{cart.length}Cart</Link>
+        </li>
+        <li className="animation">
+          <Link to="/admin" className="secondary">
+            Admin
+          </Link>
         </li>
       </ul>
     </div>
