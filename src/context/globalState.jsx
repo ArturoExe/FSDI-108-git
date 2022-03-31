@@ -9,7 +9,21 @@ const GlobalState = (props) => {
   const addProdToCart = (prod) => {
     console.log("adding prod to state");
     let copy = [...cart];
-    copy.push(prod);
+    let isFound = false;
+
+    for (let i = 0; i < copy.length; i++) {
+      let prodInCart = copy[i];
+
+      if (prodInCart._id === prod._id) {
+        //product found
+        prodInCart.quantity += prod.quantity;
+        isFound = true;
+      }
+    }
+    if (!isFound) {
+      copy.push(prod);
+    }
+
     setCart(copy);
   };
 

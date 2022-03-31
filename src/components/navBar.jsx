@@ -19,6 +19,14 @@ const NavBar = () => {
 
   const cart = useContext(store).cart; //read cart from context
 
+  const getNumber = () => {
+    let sum = 0;
+    for (let i = 0; i < cart.length; i++) {
+      sum += cart[i].quantity;
+    }
+    console.log(cart);
+    return sum;
+  };
   return (
     <div className="navBar animation">
       <Link to="/" className="logo">
@@ -36,7 +44,7 @@ const NavBar = () => {
           <Link to="/catalog">Catalog</Link>
         </li>
         <li className="animation">
-          <Link to="/cart">{cart.length}Cart</Link>
+          <Link to="/cart">{getNumber()}Cart</Link>
         </li>
         <li className="animation">
           <Link to="/admin" className="secondary">

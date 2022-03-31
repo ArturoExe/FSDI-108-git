@@ -1,0 +1,24 @@
+.product-cart-container {
+  background-color: rgb(194, 194, 194);
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.item-information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bt-remove {
+  width: 5rem;
+  height: 2rem;
+  font-weight: 700;
+}
+
+.bt-remove:hover {
+  background-color: red;
+}

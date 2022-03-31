@@ -22,7 +22,6 @@ const Product = (props) => {
     //add product to context (state)
     let cartProduct = { ...props };
     cartProduct.quantity = quantity;
-
     addProdToCart(cartProduct);
   };
 
