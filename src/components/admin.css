@@ -10,7 +10,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .formControl {
   width: 100%;

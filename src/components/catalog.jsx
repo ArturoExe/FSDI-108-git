@@ -6,20 +6,20 @@ import { useEffect, useState } from "react";
 const Catalog = () => {
   let [product, setProduct] = useState([]);
 
-  const loadCatalog = () => {
+  const loadCatalog = async () => {
     console.log("data retrieve");
-
     let service = new DataService();
-    let data = service.getCatalog();
+    let data = await service.getCatalog();
     setProduct(data);
   };
 
   useEffect(() => {
     loadCatalog();
-  });
+  }, []);
 
   return (
     <div className="catalog">
+      {/* Renders the items */}
       {product.map((prod) => (
         <Product
           key={prod._id}

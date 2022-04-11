@@ -43,8 +43,11 @@ const NavBar = () => {
         <li className="animation">
           <Link to="/catalog">Catalog</Link>
         </li>
-        <li className="animation">
-          <Link to="/cart">{getNumber()}Cart</Link>
+        <li className="animation cart-h">
+          <Link to="/cart">
+            <img src="./img/cart-icon.svg" alt="my cart" className="icon" />
+            <span>{getNumber()}</span>
+          </Link>
         </li>
         <li className="animation">
           <Link to="/admin" className="secondary">

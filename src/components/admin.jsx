@@ -1,5 +1,5 @@
 import "./admin.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DataService from "../services/dataService";
 
 function Admin() {
@@ -32,15 +32,29 @@ function Admin() {
     setAllProducts(copy);
   };
 
-  const saveCoupon = () => {
+  const saveCoupon = async () => {
+    console.log(coup);
+    let fixed = { ...coup };
+    fixed.discount = parseInt(coup.discount);
+
     let service = new DataService();
-    service.saveCoupon(coup);
+    let resp = await service.saveCoupon(fixed);
 
     //add to the list of coupons
     let copy = [...allCoupons];
     copy.push(coup);
     setAllCoupons(copy);
   };
+
+  const loadCoupons = async () => {
+    let servie = new DataService();
+    let all = await servie.getCoupons();
+    setAllCoupons(all);
+  };
+
+  useEffect(() => {
+    loadCoupons();
+  }, []);
 
   return (
     <div className="admin">
@@ -125,6 +139,7 @@ function Admin() {
             </div>
           </div>
           <div className="coupon-container">
+            <h2>Active Coupons</h2>
             {allCoupons.map((c, index) => (
               <div key={index}>
                 <label>{c.code}</label>-<label>{c.discount}</label>
